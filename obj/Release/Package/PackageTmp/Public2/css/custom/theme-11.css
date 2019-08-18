@@ -1,0 +1,104 @@
+
+
+/*============
+
+This file only contains the theme color schemes, (not the style ) If you want to change the color schemes
+of the theme 
+just change the color code  and rgba value. The whole theme color will be changed.
+
+===========*/
+
+
+
+
+
+/* Filter the 'background' value classes*/
+
+.switcher .switch_btn button,.header-upper,.header-lower .search-box-area .form-group button,.btn-one,
+.section-title h2:before,.our-service .single-item .icon-box,.our-idea .single-item .lower-content h4:before,
+.our-idea .single-item .lower-content:after,.sec-title-two:before,.progress-levels .progress-box .bar .bar-fill,
+.owl-theme .owl-controls .owl-nav [class*="owl-"],.inner-box .box .content a,.dropdown-menu>li>a:hover,
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span,.brand-section,.bye-now,
+.main-footer .footer-title h4:before,.main-footer .contact-wideget .input-box button,.scroll-to-top,
+.accordion .acc-btn.active,.choose-us .single-item .icon-box i,.error-section  .input-box button,
+.service-details .sidebar .list li a.active, .service-details .sidebar .list li a:hover,
+.service-details .sidebar .download a,.link-btn li a:hover, .link-btn li a.active,.shop .sidebar-search button,
+.sidebar-page-container .sidebar .title h3:before,.sidebar-page-container .sidebar .sidebar-catagories .list 
+li a.active, .sidebar-page-container .sidebar .sidebar-catagories .list li a:hover,.single-project 
+.project-details-content .groth,.noUi-horizontal .noUi-handle,.noUi-connect,.shop .price-text button,
+.single-shop .company-tab .nav-pills li.active a,.cart-page .add-to-cart-wrap button,.cart-page .related-product 
+.single-item .new,.sidebar-page-container .sidebar-search button,.blog-details .post-share-option .post-social 
+li a.active, .blog-details .post-share-option .post-social li a:hover,.blog-details .blog-details-content h3:before
+,.contact-info-section .single-item h4:before,.contact-section h2:before,.main-menu .navbar-header .navbar-toggle 
+.icon-bar,.onoffswitch-label,.onoffswitch-checkbox:checked + .onoffswitch-label,.theme_menu .search-box-area 
+.form-group button,.tparrows:hover,.sidebar-page-container .sidebar-tag li a:hover,
+.news-section .lower-content .list li a:hover
+{
+	background: #4ecd66;
+}
+
+
+/* background style two */
+
+
+
+/* Filter the 'color' value classes*/
+
+.main-menu .navigation > li:hover > a, .main-menu .navigation > li.current > a, .main-menu .navbar-collapse > ul 
+li.dropdown:hover .dropdown-btn span:before, .main-menu .navbar-collapse > ul li.dropdown.current .dropdown-btn 
+span:before,.main-menu .navigation > li > ul > li:hover > a,.header-lower .search-box-area:hover .search-toggle 
+i:before,.btn-one:hover,.about-us .about-content h3 span,.owl-theme .owl-controls .owl-nav [class*="owl-"]:hover,
+.testimonials-section .content:before,.testimonials-section .content .author p,.partners-section .content .author,
+.single-item-overlay .img-box .overlay ul li a:hover,.news-section .lower-content .meta li i:before,a:hover,
+.main-footer .footer-social li a:hover,.main-footer .service-wideget .list li a:hover:before,.main-footer 
+.news-wideget .single-item .text,.main-footer .contact-wideget .single-item .icon-box i:before,.footer-bottom a,
+.footer-bottom .footer-card li a:hover,.fact-counter span,.fact-counter span,h5 a:hover, h6 a:hover, h4 a:hover,
+.team-section .single-item .text,.team-section .single-item .lower-content .mail i:before,.bread-crumb .text,
+.testimonial-page .testimonial-content .author-info .text,.error-section .error-title,.error-section p a,
+.gallery-page .post-filter li.active,.gallery-page .inner-box .lower-content p,.sidebar-page-container .sidebar 
+.sidebar-post .single-item .text,.single-project .project-details-content .project-result .list li:before,
+.shop  .latest-product .single-item .list li i:before,.shop  .latest-product .single-item a,.shop .shop-area 
+.single-item .content-box .item-price,.shop .shop-area .single-item .content-box .cart a,.single-shop 
+.single-product-area .price h4,.single-shop .single-product-area .rating li i:before,.single-shop 
+.company-content .tab-content .single-author .author-rating li,.cart-page .cart-table tbody tr .sub-total,
+.cart-page .cart-total-box .shipping-cart li span,.checkout-page .exisitng-customer h5 a,.checkout-page 
+.order-info .order-total span,.checkout-page .payment-info .card-system ul li a,.login-page .forgot a,
+.blog-details .content-style-two .list li:before,.blog-details .post-share-option .tags li a,
+.blog-details .comment-area .single-comment .date p,.blog-details .comment-area .single-comment a,
+.contact-info-section .single-item i:before,.main-footer h6 a:hover,.theme_menu .search-box-area:hover 
+.search-toggle i:before,.shop .latest-product .single-item h5 a:hover,.cart-page .add-to-cart-wrap button:hover,
+.shop .price-text button:hover,.main-footer .news-wideget .single-item h6 a:hover,
+.main-footer .service-wideget .list li a:hover
+
+{
+	color:#4ecd66;
+}
+
+
+/* Filter the 'border color' value classes*/
+
+.main-menu .navigation > li > ul > li > a,.main-menu .navigation > li > ul,.header-lower .search-box-area input,
+#polyglotLanguageSwitcher ul.dropdown li,.btn-one,.btn-one:hover,.owl-theme .owl-controls .owl-nav [class*="owl-"],
+.owl-theme .owl-controls .owl-nav [class*="owl-"]:hover,input:focus, textarea:focus,.main-footer .contact-wideget 
+.input-box input,.accordion .acc-btn.active,.service-details .sidebar .list li a.active, .service-details .sidebar 
+.list li a:hover,.link-btn li a:hover, .link-btn li a.active,.gallery-page .post-filter li.active,
+.sidebar-page-container .sidebar .sidebar-catagories .list li a.active, .sidebar-page-container .sidebar 
+.sidebar-catagories .list li a:hover,.blog-details .post-share-option .post-social li a.active, .blog-details 
+.post-share-option .post-social li a:hover,.theme_menu .search-box-area input,.tparrows:hover,
+.cart-page .add-to-cart-wrap button,.shop .price-text button,.shop .price-text button:hover,
+.theme_menu .search-box-area input[type='search']
+
+{
+  border-color:#4ecd66;
+}
+
+
+
+/* change the theme logo for your own color schemes */
+
+.logo-box {
+    background: url(/Public/img1.png) no-repeat 9% 100%;
+}
+.footer-logo {
+   background: url(../../images/footer/logo10.png) no-repeat 9% 100%;
+}

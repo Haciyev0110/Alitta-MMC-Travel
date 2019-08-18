@@ -1,0 +1,130 @@
+﻿@model IEnumerable<AllittaMMC.Models.AboutU>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<div class="sb2-2">
+    <div class="sb2-2-2">
+        <ul>
+            <li>
+                <a href="@Url.Action("Index","Home")"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            </li>
+            <li class="active-bre">
+                <a href="#"> Ui Form</a>
+            </li>
+        </ul>
+    </div>
+    <div class="sb2-2-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box-inn-sp">
+                    <div class="inn-title">
+                        <h4>Haqqımızda Duzeliş Et</h4>
+                        <p>Haqqımızda</p>
+                        <a class="dropdown-button drop-down-meta" href="#" data-activates="dr-users"><i class="material-icons">more_vert</i></a>
+                        <ul id="dr-users" class="dropdown-content">
+                            <li>
+                                <a href="@Url.Action("Create","AboutUs")">Add New</a>
+                            </li>
+                        </ul>
+
+                        <!-- Dropdown Structure -->
+
+                    </div>
+                    <div class="tab-inn">
+                        <div class="table-responsive table-desi">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Şəkil</th>
+                                        <th>Başlıq</th>
+                                        <th>Megzi</th>
+                                        <th>Mezmun</th>
+                                        <th>View</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <span class="list-img"><img src="~/Public2/images/about/@item.Image" alt=""></span>
+                                            </td>
+                                            <td>
+                                                <a href="#"><span class="list-enq-name">@item.Header</span></a>
+                                            </td>
+                                            <td>@item.TextH</td>
+                                            <td>@item.TextP</td>
+                                            <td>
+                                                <a href="@Url.Action("Details","AboutUs",new {id=item.Id })"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                            </td>
+                                            <td>
+                                                <a href="@Url.Action("Edit","AboutUs",new {id=item.Id })"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                            </td>
+                                            <td>
+                                                <a href="@Url.Action("Delete","AboutUs",new {id=item.Id })"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Header)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TextH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TextP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Header)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TextH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TextP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>*@

@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A4490D_khaligchModelStoreContainer" CdmEntityContainer="DB_A4490D_khaligchEntities">
+    <EntitySetMapping Name="AboutUS">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.AboutU">
+        <MappingFragment StoreEntitySet="AboutUS">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="TextH" ColumnName="TextH" />
+          <ScalarProperty Name="TextP" ColumnName="TextP" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Additional_Info">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.Additional_Info">
+        <MappingFragment StoreEntitySet="Additional_Info">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Min_Age" ColumnName="Min_Age" />
+          <ScalarProperty Name="Max_People" ColumnName="Max_People" />
+          <ScalarProperty Name="Landing" ColumnName="Landing" />
+          <ScalarProperty Name="Check_In" ColumnName="Check_In" />
+          <ScalarProperty Name="Check_Out" ColumnName="Check_Out" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HomeSlides">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.HomeSlide">
+        <MappingFragment StoreEntitySet="HomeSlide">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text1" ColumnName="Text1" />
+          <ScalarProperty Name="Text2" ColumnName="Text2" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hotels">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.Hotel">
+        <MappingFragment StoreEntitySet="Hotels">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Hotel1" ColumnName="Hotel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OurTeams">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.OurTeam">
+        <MappingFragment StoreEntitySet="OurTeam">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SocialID" ColumnName="SocialID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.Service">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Names" ColumnName="Names" />
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicesHeaders">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.ServicesHeader">
+        <MappingFragment StoreEntitySet="ServicesHeader">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Slides">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.Slide">
+        <MappingFragment StoreEntitySet="Slides">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Text1" ColumnName="Text1" />
+          <ScalarProperty Name="Text2" ColumnName="Text2" />
+          <ScalarProperty Name="Text3" ColumnName="Text3" />
+          <ScalarProperty Name="Text4" ColumnName="Text4" />
+          <ScalarProperty Name="SlideImg" ColumnName="SlideImg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Socials">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.Social">
+        <MappingFragment StoreEntitySet="Social">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Link1" ColumnName="Link1" />
+          <ScalarProperty Name="Link2" ColumnName="Link2" />
+          <ScalarProperty Name="Link3" ColumnName="Link3" />
+          <ScalarProperty Name="Link4" ColumnName="Link4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tickets">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.Ticket">
+        <MappingFragment StoreEntitySet="Tickets">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ticket1" ColumnName="Ticket" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TourPackets">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.TourPacket">
+        <MappingFragment StoreEntitySet="TourPacket">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TourName" ColumnName="TourName" />
+          <ScalarProperty Name="TourDay" ColumnName="TourDay" />
+          <ScalarProperty Name="HotelStar" ColumnName="HotelStar" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Additional_Info_ID" ColumnName="Additional_Info_ID" />
+          <ScalarProperty Name="Map_Tour" ColumnName="Map_Tour" />
+          <ScalarProperty Name="TourSortID" ColumnName="TourSortID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TourSorts">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.TourSort">
+        <MappingFragment StoreEntitySet="TourSort">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SortBy" ColumnName="SortBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transfers">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.Transfer">
+        <MappingFragment StoreEntitySet="Transfer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="Car" ColumnName="Car" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Travels">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.Travel">
+        <MappingFragment StoreEntitySet="Travel">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ticket" ColumnName="Ticket" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Adminname" ColumnName="Adminname" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Administrators">
+      <EntityTypeMapping TypeName="DB_A4490D_khaligchModel.Administrator">
+        <MappingFragment StoreEntitySet="Administrator">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

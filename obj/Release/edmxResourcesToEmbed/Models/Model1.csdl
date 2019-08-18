@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A4490D_khaligchModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AboutU">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Header" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TextH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TextP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Additional_Info">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Location" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Duration" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Min_Age" Type="Int32" />
+    <Property Name="Max_People" Type="Int32" />
+    <Property Name="Landing" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Check_In" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Check_Out" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TourPackets" Relationship="Self.FK__TourPacke__Addit__5535A963" FromRole="Additional_Info" ToRole="TourPacket" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Office" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HomeSlide">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Text1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Hotel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Hotel1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Isciler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Job" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Images" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="OurTeam">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fullname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Job" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SocialID" Type="Int32" />
+    <NavigationProperty Name="Social" Relationship="Self.FK__OurTeam__SocialI__534D60F1" FromRole="OurTeam" ToRole="Social" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Names" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ServiceID" Type="Int32" />
+    <NavigationProperty Name="ServicesHeader" Relationship="Self.FK__Services__Servic__5441852A" FromRole="Services" ToRole="ServicesHeader" />
+  </EntityType>
+  <EntityType Name="ServicesHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Header" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Services" Relationship="Self.FK__Services__Servic__5441852A" FromRole="ServicesHeader" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="Slide">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Text1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Text2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Text3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Text4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SlideImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Social">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Link1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Link2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Link3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Link4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OurTeams" Relationship="Self.FK__OurTeam__SocialI__534D60F1" FromRole="Social" ToRole="OurTeam" />
+  </EntityType>
+  <EntityType Name="Ticket">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ticket1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TourPacket">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TourName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TourDay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HotelStar" Type="Int32" />
+    <Property Name="Price" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Additional_Info_ID" Type="Int32" />
+    <Property Name="Map_Tour" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TourSortID" Type="Int32" />
+    <NavigationProperty Name="Additional_Info" Relationship="Self.FK__TourPacke__Addit__5535A963" FromRole="TourPacket" ToRole="Additional_Info" />
+    <NavigationProperty Name="TourSort" Relationship="Self.FK_TourPacket_TourSort" FromRole="TourPacket" ToRole="TourSort" />
+  </EntityType>
+  <EntityType Name="TourSort">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SortBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TourPackets" Relationship="Self.FK_TourPacket_TourSort" FromRole="TourSort" ToRole="TourPacket" />
+  </EntityType>
+  <EntityType Name="Transfer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Images" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Car" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Travel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ticket" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK__TourPacke__Addit__5535A963">
+    <End Role="Additional_Info" Type="Self.Additional_Info" Multiplicity="0..1" />
+    <End Role="TourPacket" Type="Self.TourPacket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Additional_Info">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TourPacket">
+        <PropertyRef Name="Additional_Info_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OurTeam__SocialI__534D60F1">
+    <End Role="Social" Type="Self.Social" Multiplicity="0..1" />
+    <End Role="OurTeam" Type="Self.OurTeam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Social">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OurTeam">
+        <PropertyRef Name="SocialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Services__Servic__5441852A">
+    <End Role="ServicesHeader" Type="Self.ServicesHeader" Multiplicity="0..1" />
+    <End Role="Services" Type="Self.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServicesHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Services">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TourPacket_TourSort">
+    <End Role="TourSort" Type="Self.TourSort" Multiplicity="0..1" />
+    <End Role="TourPacket" Type="Self.TourPacket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TourSort">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TourPacket">
+        <PropertyRef Name="TourSortID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_A4490D_khaligchEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AboutUS" EntityType="Self.AboutU" />
+    <EntitySet Name="Additional_Info" EntityType="Self.Additional_Info" />
+    <EntitySet Name="Contacts" EntityType="Self.Contact" />
+    <EntitySet Name="HomeSlides" EntityType="Self.HomeSlide" />
+    <EntitySet Name="Hotels" EntityType="Self.Hotel" />
+    <EntitySet Name="Iscilers" EntityType="Self.Isciler" />
+    <EntitySet Name="OurTeams" EntityType="Self.OurTeam" />
+    <EntitySet Name="Services" EntityType="Self.Service" />
+    <EntitySet Name="ServicesHeaders" EntityType="Self.ServicesHeader" />
+    <EntitySet Name="Slides" EntityType="Self.Slide" />
+    <EntitySet Name="Socials" EntityType="Self.Social" />
+    <EntitySet Name="Tickets" EntityType="Self.Ticket" />
+    <EntitySet Name="TourPackets" EntityType="Self.TourPacket" />
+    <EntitySet Name="TourSorts" EntityType="Self.TourSort" />
+    <EntitySet Name="Transfers" EntityType="Self.Transfer" />
+    <EntitySet Name="Travels" EntityType="Self.Travel" />
+    <AssociationSet Name="FK__TourPacke__Addit__5535A963" Association="Self.FK__TourPacke__Addit__5535A963">
+      <End Role="Additional_Info" EntitySet="Additional_Info" />
+      <End Role="TourPacket" EntitySet="TourPackets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OurTeam__SocialI__534D60F1" Association="Self.FK__OurTeam__SocialI__534D60F1">
+      <End Role="Social" EntitySet="Socials" />
+      <End Role="OurTeam" EntitySet="OurTeams" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Services__Servic__5441852A" Association="Self.FK__Services__Servic__5441852A">
+      <End Role="ServicesHeader" EntitySet="ServicesHeaders" />
+      <End Role="Services" EntitySet="Services" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TourPacket_TourSort" Association="Self.FK_TourPacket_TourSort">
+      <End Role="TourSort" EntitySet="TourSorts" />
+      <End Role="TourPacket" EntitySet="TourPackets" />
+    </AssociationSet>
+    <EntitySet Name="Admins" EntityType="DB_A4490D_khaligchModel.Admin" />
+    <EntitySet Name="Administrators" EntityType="DB_A4490D_khaligchModel.Administrator" />
+  </EntityContainer>
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adminname" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AdminPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Administrator">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

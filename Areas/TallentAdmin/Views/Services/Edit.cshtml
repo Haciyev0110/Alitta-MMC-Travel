@@ -1,0 +1,56 @@
+﻿@model AllittaMMC.Models.Service
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+@using (Html.BeginForm("Edit", "Services", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid sb2">
+        <div class="row">
+
+            <div class="sb2-2">
+                <div class="sb2-2-add-blog sb2-2-1">
+                    <div class="box-inn-sp">
+                        <div class="inn-title">
+                            <h4>Yeni Serviz Əlavə Et</h4>
+                        </div>
+                        <div class="bor">
+                            <form>
+
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea id="textarea1" class="materialize-textarea" name="Names">@Model.Names</textarea>
+                                        <label for="textarea1">Serviz Daxil et:</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <select  name="ServiceID">
+                                            <option value="@Model.ServiceID"> @Model.ServicesHeader.Header</option>
+                                            @foreach (var item in ViewBag.ServicesCate)
+                                            {
+                                                <option value="@item.Id">@item.Header</option>
+
+                                            }
+
+                                        </select>
+                                        <label>Kateqoriya Seç</label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input type="submit" class="waves-effect waves-light btn-large" value="Submit">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

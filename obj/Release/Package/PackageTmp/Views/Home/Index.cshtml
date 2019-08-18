@@ -1,0 +1,267 @@
+﻿@using AllittaMMC.Models;
+
+@model IndexVM
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="ALLITTA MMC, ALLITTA">
+    <meta name="keywords" content="ALLITTA MMC, ALLITTA">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL INTERNATIONAL TIME TO ACTION</title>
+
+    <!-- Stylesheets -->
+    <link href="~/Public2/css/style.css" rel="stylesheet">
+    <link href="~/Public2/css/responsive.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" id="jssDefault" href="~/Public2/css/custom/theme-11.css" />
+    <link rel="icon" href="~/Public/image1.png" type="image/x-icon">
+
+</head>
+
+<!-- body wrapper -->
+<body class="body_wrapper">
+    <!-- .preloader -->
+    <div class="preloader"></div>
+    <!-- /.preloader -->
+    <!-- main header area -->
+    <header class="main-header">
+
+        <!-- header upper -->
+        <div class="header-upper">
+            <div class="container">
+                <div class="top-left">
+                    <div class="text">Xoş Gəlmisiniz</div>
+                </div>
+                <div class="top-right">
+                    <ul class="top-bar">
+                        <li><i class="fa fa-phone"></i>Phone: @Model.contact.Phone</li>
+                        <li><i class="fa fa-envelope"></i>@Model.contact.Email</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end header upper -->
+        <!-- header lower/fixed-header -->
+        <div class="theme_menu stricky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="logo-box">
+                            <a href="~/Home/Index"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-12 col-xs-12">
+                        <div class="menu-bar">
+                            <nav class="main-menu">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li class="current"><a href="~/Home/Index">Ana Səhifə</a></li>
+                                        <li class="dropdown">
+                                            <a href="~/About/Index">Haqqımızda</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="~/Travel/Index">Turizm</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="~/Xidmet/Transfer">Transfer</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="~/Xidmet/Index">Xidmətlər</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="~/Contact/Index/">Əlaqə</a>
+                                        </li>
+                                    </ul>
+
+                                    <!-- mobile menu -->
+                                    <ul class="mobile-menu clearfix">
+                                        <li><a href="~/Home/Index">Ana Səhifə</a></li>
+                                        <li class="dropdown">
+                                            <a href="~/About/Index">Haqqımızda</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="~/Travel/Index">Turizm</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="~/Xidmet/Transfer">Transfer</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="~/Xidmet/Index">Xidmətlər</a>
+                                        </li>
+                                        <li><a href="~/Contact/Index/">Əlaqə</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end header lower/fixed-header -->
+
+    </header>
+    <!-- end main header area -->
+    <!--main slider-->
+    <section class="main-slider">
+
+        <div class="main-slider-carousel owl-carousel owl-theme">
+
+            @foreach (var item in Model.homeSlides)
+            {
+                <div class="slide" style="background-image:url(/Public2/images/slider/@item.Image)">
+                    <div class="container">
+                        <div class="content">
+                            <h1>@item.Text1<br />@item.Text2</h1>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </section>
+    <!-- main slider end -->
+    <!-- about section -->
+    <section class="about-us sec-pad">
+        <div class="container">
+            <div class="about-title centred">
+                <div class="section-title"><h2>Haqqımızda</h2></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12 about-column">
+                    <div class="about-content">
+                        <h3><span>ALLİTTA MMC </span>- yə Xoş Gəlmisiniz.</h3>
+                        <h5>@Model.about.Header</h5>
+                        <div class="text">
+                            <p>@Model.about.TextH</p>
+                            <p>@Model.about.TextP</p>
+                        </div>
+                        <div class="button"><a href="~/Public2/#" class="btn-one">Daha Çox</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12 about-column">
+                    <div class="img-box">
+                        <figure><img src="~/Public2/images/about/@Model.about.Image" alt=""></figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about section end -->
+    <!-- service section -->
+    <section class="our-service sec-pad">
+        <div class="container">
+            <div class="service-title centred">
+                <div class="section-title"><h2>Xidmətlərimiz</h2></div>
+            </div>
+            <div class="row">
+                @foreach (var item in Model.xidmetlerBasliqs.OrderBy(a=>Guid.NewGuid()).Take(3))
+                {
+                    <div class="col-md-4 col-sm-6 col-xs-12 service-column">
+                        <div class="single-item hoverly-one">
+                            <figure class="img-box">
+                                <img src="~/Public2/images/service/@item.Image" alt="">
+                                <div class="overlay">
+                                    <a href="~/Home/Index/@item.Id" class="btn-one">Daha Çox</a>
+                                </div>
+                            </figure>
+                            <div class="lower-content">
+                                <div class="icon-box"><i class="flaticon-growth"></i></div>
+                                <h4><a href="~/Xidmet/Index/@item.Id">@item.Header</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </section>
+    <!-- service section end -->
+    <!-- main-footer area -->
+    <section class="footer-bottom">
+        <div class="container">
+            <div class="copyright">Copyright © <a href="http://khaligheydarov.com">Khalig</a> 2018. All rights reserved.</div>
+            <ul class="footer-card clearfix">
+                <li><a><i class="fa fa-cc-paypal"></i></a></li>
+                <li><a><i class="fa fa-cc-mastercard"></i></a></li>
+                <li><a><i class="fa fa-cc-discover"></i></a></li>
+                <li><a><i class="fa fa-cc-visa"></i></a></li>
+                <li><a><i class="fa fa-cc-stripe"></i></a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- main-footer end -->
+    <!-- footer bottom -->
+    <div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-angle-up"></span></div>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5c49b03051410568a108229b/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <!--jquery js -->
+    <!-- jqurey -->
+    <script type="text/javascript" src="~/Public2/js/jquery-2.1.4.js"></script>
+
+    <!-- Bootstrap js -->
+    <script src="~/Public2/js/bootstrap.min.js"></script>
+
+    <!-- Style-switcher  -->
+    <script type="text/javascript" src="~/Public2/js/jQuery.style.switcher.min.js"></script>
+
+    <!-- owl.carousel js -->
+    <script src="~/Public2/js/owl.carousel.min.js"></script>
+
+    <!-- jQuery ui js -->
+    <script src="~/Public2/js/jquery-ui.js"></script>
+
+    <!-- jQuery fancybox js -->
+    <script src="~/Public2/js/jquery.fancybox.pack.js"></script>
+
+    <!-- jQuery wow js -->
+    <script src="~/Public2/js/wow.js"></script>
+
+    <!-- jQuery contact form js -->
+    <script src="~/Public2/js/validation.js"></script>
+
+    <!-- jQuery select menu js -->
+    <script src="~/Public2/js/bootstrap-select.min.js"></script>
+
+    <!-- jQuery smooth scroll js -->
+    <script type="text/javascript" src="~/Public2/js/SmoothScroll.js"></script>
+
+    <!-- jQuery language switcher js -->
+    <script src="~/Public2/js/jquery.polyglot.language.switcher.js"></script>
+
+    <!-- jQuery canvas js -->
+    <script type="text/javascript" src="~/Public2/js/jquery.canvasjs.min.js"></script>
+    <script src="~/Public2/js/charts-script.js"></script>
+
+    <!-- js main js-->
+    <script src="~/Public2/js/script.js"></script>
+
+    <!-- End of .page_wrapper -->
+</body>
+
+<!-- Mirrored from azim.commonsupport.com/Tallent/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Jan 2019 18:31:08 GMT -->
+</html>
+

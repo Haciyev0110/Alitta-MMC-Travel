@@ -1,0 +1,57 @@
+﻿@model AllittaMMC.Models.ServicesHeader
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Edit", "ServicesHeaders", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+<div class="row">
+    <div class="sb2-2">
+        <div class="sb2-2-add-blog sb2-2-1">
+            <div class="box-inn-sp">
+                <div class="inn-title">
+                    <h4> Kateqoriya Dəyişiklik Et</h4>
+                </div>
+                <div class="bor">
+                    <form>
+                        <div class="row">
+
+                            <div class="input-field col s12">
+                                <div class="file-field">
+                                    <div class="btn">
+                                        <span>File</span>
+                                        <input type="file" name="Image">
+                                        <input type="hidden" name="fileadi" value="@Model.Image" />
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text" placeholder="Upload Blog Banner" name="Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="textarea1" class="materialize-textarea" name="Header">@Model.Header</textarea>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="submit" class="waves-effect waves-light btn-large" value="Submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+
+

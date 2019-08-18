@@ -1,0 +1,166 @@
+﻿@model AllittaMMC.Models.TourPacket
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+@using (Html.BeginForm("Create", "TourPackets", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="sb2-2">
+            <div class="sb2-2-add-blog sb2-2-1">
+                <div class="box-inn-sp">
+                    <div class="inn-title">
+                        <h4>Tur Yarad</h4>
+                    </div>
+                    <div class="bor">
+                        <form>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="list-title" type="text" name="Header" class="validate">
+                                    <label for="list-title">Başlıq</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <div class="file-field">
+                                        <div class="btn">
+                                            <span>File</span>
+                                            <input type="file" name="Image">
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text" placeholder="Upload Blog Banner" name="Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="email" type="text" value="" name="TourName" class="validate">
+                                    <label for="email">Başlıq</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="email" type="text" value="" name="TourDay" class="validate">
+                                    <label for="email">Başlıq</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="email" type="text" value="" name="HotelStar" class="validate">
+                                    <label for="email">Başlıq</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="email" type="text" value="" name="Price" class="validate">
+                                    <label for="email">Başlıq</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="email" type="text" value="" name="Map_Tour" class="validate">
+                                    <label for="email">Başlıq</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <select name="ServiceID">
+                                        @foreach (var item in ViewBag.Toursort)
+                                        {
+                                            <option value="@item.ID">@item.SortBy</option>
+
+                                        }
+
+                                    </select>
+                                    <label>Kateqoriya Seç</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <select id="addinfo" name="Additional_Info_ID">
+                                        @foreach (var item in ViewBag.AddInfo)
+                                        {
+                                            <option value="@item.ID">@item.ID</option>
+
+                                        }
+
+                                    </select>
+
+                                    <label>Kateqoriya Seç</label>
+
+                                    <div class="input-field col s12" id="apends">
+                                        <label for="list-title">Ölkə</label>
+
+                                    </div>
+
+                                    @*<div class="input-field col s12">
+
+            <label for="list-title">Müddət</label>
+        </div>
+        <div class="input-field col s12">
+            <input id="list-title" type="number" min="0" max="100" value="@Model.Additional_Info.Min_Age" name="Min_Age" class="validate">
+            <label for="list-title">Minimum Yaş</label>
+        </div>
+        <div class="input-field col s12">
+            <input id="list-title" type="number" min="0" value="@Model.Additional_Info.Max_People" name="Max_People" class="validate">
+            <label for="list-title">Maksimum İnsan</label>
+        </div>
+        <div class="input-field col s12">
+            <input id="list-title" type="text" value="@Model.Additional_Info.Landing" name="Landing" class="validate">
+            <label for="list-title">Açılış</label>
+        </div>
+        <div class="input-field col s12">
+            <input id="list-title" type="text" value="@Model.Additional_Info.Check_In" name="Check_In" class="validate">
+            <label for="list-title">Giriş Vaxtı</label>
+        </div>
+        <div class="input-field col s12">
+            <input id="list-title" type="text" value="@Model.Additional_Info.Check_Out" name="Check_Out" class="validate">
+            <label for="list-title">Çıxış Vaxtı</label>
+        </div>*@
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea id="summernote" class="materialize-textarea" name="Description"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row"></div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="submit" class="waves-effect waves-light btn-large" value="Create">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Script{
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Hello stand alone ui',
+            tabsize: 2,
+            height: 300
+        });
+    </script>
+
+
+    <script >
+        $(document).on("change", "#addinfo", function (a) {
+
+            var adinfo = $(this).val();
+
+            $.ajax({
+                type: "Get",
+                url: "/Ajax/Adinforesult",
+                dataType: "json",
+                data: { "id": adinfo },
+                success: function (res) {
+
+                    $("#apends").append(res)
+                }
+
+            })
+        });
+
+    </script>
+
+}

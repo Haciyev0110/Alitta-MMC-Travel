@@ -1,0 +1,71 @@
+﻿@model AllittaMMC.Models.OurTeam
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+@using (Html.BeginForm("Delete", "OurTeams", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+<div class="container-fluid sb2">
+    <div class="row">
+        <div class="sb2-2">
+            <div class="sb2-2-2">
+                <ul>
+                    <li>
+                        <a href="@Url.Action("Index","Dashboard")"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    </li>
+                    <li class="active-bre">
+                        <a href="@Url.Action("Index","OurTeams")">Geriyə Qayıd</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sb2-2-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box-inn-sp">
+                            <div class="inn-title">
+                                <h4>İşçini Sil</h4>
+                            </div>
+                            <div class="tab-inn">
+                                <form>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="email" type="text" value="@Model.Fullname" class="validate">
+                                            <label for="email">Ad Soyad</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="email" type="email" value="@Model.Email" class="validate">
+                                            <label for="textarea1">Email:</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="textarea1" class="materialize-textarea" value="@Model.Job" />
+                                            <label for="textarea1">Peşəsi:</label>
+                                        </div>
+
+
+                                        <div class="input-field col s4">
+
+                                            <label for="textarea1">Şəkil:</label>
+                                            <img src="~/Public2/images/team/@Model.Image" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input type="submit" class="waves-effect waves-light btn-large" value="Submit">
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}

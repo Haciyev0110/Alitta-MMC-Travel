@@ -1,0 +1,567 @@
+﻿@using AllittaMMC.Models;
+
+@model IndexVM
+
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<!-- Mirrored from getnajmul.com/theme/trabble/single-package.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Jan 2019 22:15:00 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="ALLITTA MMC, ALLITTA">
+     <meta name="keywords" content="ALLITTA MMC, ALLITTA">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL INTERNATIONAL TIME TO ACTION</title>
+    <!-- Google Fonts Includes -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <!-- Favi icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/Public/image1.png">
+    <!-- bootstrap v3.3.6 css -->
+    <link rel="stylesheet" href="~/Public/css/bootstrap.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="~/Public/css/animate.css">
+    <!-- Button Hover animate css -->
+    <link rel="stylesheet" href="~/Public/css/hover-min.css">
+    <!-- jquery-ui.min css -->
+    <link rel="stylesheet" href="~/Public/css/jquery-ui.min.css">
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="~/Public/css/meanmenu.min.css">
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="~/Public/css/owl.carousel.min.css">
+    <!-- slick css -->
+    <link rel="stylesheet" href="~/Public/css/slick.css">
+    <!-- chosen.min-->
+    <link rel="stylesheet" href="~/Public/css/chosen.min.css">
+    <!-- chosen.min-->
+    <link rel="stylesheet" href="~/Public/css/jquery-customselect.css">
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="~/Public/css/font-awesome.min.css">
+    <!-- magnific Css -->
+    <link rel="stylesheet" href="~/Public/css/magnific-popup.css">
+    <!-- custome css -->
+    <link rel="stylesheet" href="~/Public/css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="~/Public/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="~/Public/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <header>
+        <div class="header-top-area">
+            <div class="container">
+                <div class="row">
+                    <div class="header-top-left">
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <ul class="header-top-contact">
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i>@Model.contact.Location</li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>@Model.contact.Phone</li>
+                                <li><i class="fa fa-envelope-o" aria-hidden="true"></i>@Model.contact.Email</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-top-right text-right">
+                        <div class="col-md-3 col-xs-12 book-tab">
+                            <div class="book-btn">
+                                <a href="http://avia.allittammc.com">Bilet Al</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- header top end -->
+
+        <div class="header-bottom-area" id="stick-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-2 col-xs-12 tap-v-responsive">
+                        <div class="logo-area">
+                            <a href="~/Home/Index">
+                                <img src="~/Public/image1.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <nav>
+                            <ul class="main-menu text-right">
+                                <li>
+                                    <a href="~/Home/Index">Ana Səhifə</a>
+                                </li>
+                                <li>
+                                    <a href="~/About/Index">Haqqımızda</a>
+                                </li>
+                                <li>
+                                    <a href="~/Travel/Index">Turizm</a>
+                                </li>
+                                <li style="cursor:pointer;">
+                                    <a href="~/Tours/Index">Turlar</a>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="~/Tours/Xarici">Xarici Turlar</a>
+                                        </li>
+                                        <li>
+                                            <a href="~/Tours/Daxili">Daxili Turlar</a>
+                                        </li>
+                                        <li>
+                                            <a href="~/Tours/Mualicevi">Müalicəvi Turlar</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="active">
+                                    <a href="~/Hotels/Index">Hotellər</a>
+                                </li>
+                                <li>
+                                    <a href="~/Xidmet/Transfer">Transfer</a>
+                                </li>
+                                <li>
+                                    <a href="~/Xidmet/Index">Xidmətlər</a>
+                                </li>
+                                <li>
+                                    <a href="~/Contact/Index">Əlaqə</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div> <!-- main menu end here -->
+                </div>
+            </div>
+        </div> <!-- header-bottom area end here -->
+    </header> <!-- header area end here -->
+    <!-- blog breadcrumb version one strat here -->
+    <section class="breadcrumb-blog-version-one">
+        <div class="single-bredcurms" style="background-image:url('/Public/images/bercums/Single-Package-Details.jpg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="bredcrums-content">
+                            <h2>Turlar</h2>
+                            <ul>
+                                <li><a href="~/Home/Index">Ana Səhifə</a></li>
+                                <li class="active"><a href="~/Tours/Index">Turlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- blog breadcrumb version one end here -->
+
+    <section class="section-paddings single-package-area">
+        <div class="container">
+            <div class="row">
+                <!-- single package tab with details -->
+                @foreach (var item in Model.tourPackets.Where(a => a.ID == Model.sp_ID))
+                {
+                    <div class="col-md-8 col-sm-12">
+
+                        <div class="single-package-details">
+                            <div class="single-package-title">
+                                <h2>@item.TourName</h2>
+                            </div>
+                            <ul class="package-content">
+                                <li>@item.TourDay</li>
+                                <li>
+                                    @for (int i = 0; i < item.HotelStar; i++)
+                                    {
+                                        <span>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                    }
+                                </li>
+                                <li>@item.Price</li>
+                            </ul>
+                            <div class="package-features-image">
+                                <img src="~/Public/images/packages/@item.Image" alt="" class="img-responsove border-raduis-3">
+                            </div>
+                        </div><!-- tab menu strat -->
+
+                        <div class="package-tab-menu">
+                            <ul class="package-tab-menu" role="tablist" id="tab7">
+                                <li role="presentation" class="active">
+                                    <a href="~/Public/#description" aria-controls="description" role="tab" data-toggle="tab">Təsvir</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="~/Public/#map" aria-controls="map" role="tab" data-toggle="tab">Xəritə</a>
+                                </li>
+                            </ul>
+                        </div><!-- tab menu end -->
+                        <!-- tab content start -->
+                        <div class="row">
+                            <!-- tabs content -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="description">
+                                    <div class="row">
+                                        <!-- left content -->
+                                        <div class="col-md-8 col-sm-8">
+                                            <div class="tour-description">
+                                                <h4>Tour Description</h4>
+                                                <p>@item.Description</p>
+                                            </div>
+                                        </div><!-- left-content -->
+                                        <!-- right content -->
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="additional-info">
+                                                <div class="info-title">
+                                                    <h4>Əlavə məlumat</h4>
+                                                    <div class="row">
+                                                        <div class="col-md-7 col-sm-7">
+                                                            <div class="info-list">
+                                                                <p><span><i class="fa fa-map-marker"></i></span>Yer</p>
+                                                                <p><span><i class="fa fa-clock-o"></i></span>Müddəti</p>
+                                                                <p><span><i class="fa fa-user"></i></span>Yaş həddi</p>
+                                                                <p><span><i class="fa fa-users"></i></span>İnsan sayı</p>
+                                                                <p><span><i class="fa fa-plane"></i></span>Uçuş</p>
+                                                                <p><span><i class="fa fa-calendar-check-o"></i></span>Gediş</p>
+                                                                <p><span><i class="fa fa-calendar-minus-o"></i></span>Dönüş</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5 col-sm-5">
+                                                            <div class="info-details">
+                                                                <p>@item.Additional_Info.Location</p>
+                                                                <p>@item.Additional_Info.Duration</p>
+                                                                <p>@item.Additional_Info.Min_Age+</p>
+                                                                <p>@item.Additional_Info.Max_People</p>
+                                                                <p>@item.Additional_Info.Landing</p>
+                                                                <p>@item.Additional_Info.Check_In</p>
+                                                                <p>@item.Additional_Info.Check_Out</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- right content -->
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane fade" id="map">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="tour-description">
+                                                <h4>Xəritə</h4>
+                                                <!-- map -->
+                                                <div class="mapp" id="overlay">
+                                                    <iframe id="maping" src="@item.Map_Tour" allowfullscreen></iframe>
+                                                </div><!-- map -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- tabs content-->
+                        </div><!-- tab content end -->
+                    </div><!-- single package tab with details -->
+
+                }
+                <!-- booking form start here -->
+                <div class="col-md-4 col-sm-12">
+                    <aside>
+                        <div class="booking-form">
+                            <div class="booking-title">
+                                <h2>Bu Paketi Al</h2>
+                            </div>
+                            <form action="#" method="post">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" placeholder="Name *">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="confirm_email" placeholder="Confirm E-mail *">
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" id="number" placeholder="Phone Number *">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="booking-date" placeholder="dd-mm-yy *">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="ticket" placeholder="Number Of Tickets *">
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="messgae" id="message" cols="30" rows="10" class="form-control" placeholder="Message *"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="check-availability">Mövcudluğu Yoxlayın</button>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="booking-confirm hvr-shutter-out-horizontal">İNDİ AL</button>
+                                </div>
+                            </form>
+                        </div>
+                    </aside><!-- adverestment start here-->
+
+                    <div class="adding-form">
+                        <div class="addfor-bg">
+                            <div class="add-content">
+                                <h3>Sualınız var?</h3>
+                                <p style="max-width: 70%;">Əgər sualınız varsa, bizimlə əlaqə saxlayın!</p>
+                                <ul class="contact-for-add">
+                                    <li><img src="~/Public/images/icon/phone.png" alt="">@Model.contact.Phone</li>
+                                    <li><img src="~/Public/images/icon/gmail.png" alt="">@Model.contact.Email</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- adverestment start here-->
+                </div><!-- booking form end here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- realted tour start here -->
+    <section class="related-tour popular-packages">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-title-3 mbt-100 related-title">
+                        <h2>Önə çıxanlar</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- single package start -->
+
+                @foreach (var item in Model.tourPackets.OrderBy(a => Guid.NewGuid()).Take(3))
+                {
+                    <div class="col-md-4 col-sm-4">
+                        <div class="single-package">
+                            <div class="package-image">
+                                <a href="~/Tours/Single/@item.ID">
+                                    <img src="~/Public/images/packages/@item.Image" alt="">
+                                </a>
+                            </div>
+                            <div class="package-content">
+                                <h3>@item.TourName</h3>
+                                <p>@item.TourDay Qiyməti <span>@item.Price</span></p>
+                            </div>
+                            <div class="package-calto-action">
+                                <ul class="ct-action">
+                                    <li>
+                                        <a href="~/Tours/Single/@item.ID" class="travel-booking-btn hvr-shutter-out-horizontal">İNDİ bax</a>
+                                    </li>
+                                    <li>
+                                        @for (int i = 0; i < item.HotelStar; i++)
+                                        {
+                                            <i class="fa fa-star"></i>
+
+                                        }
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- single package end -->
+
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- footer area -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <!-- footer left -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-footer">
+                        <div class="footer-title">
+                            <a href="~/Home/Index">
+                                <img src="~/Public/image1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer-left">
+                            <div class="footer-logo">
+                                <p>Lorem ipsum dolor sit amet conset ctetur adipiscin elit Etiam at ipsum at ligula vestibulum sodales.</p>
+                            </div>
+                            <ul class="footer-contact">
+                                <li><img class="map" src="~/Public/images/icon/map.png" alt="">@Model.contact.Location</li>
+                                <li><img class="map" src="~/Public/images/icon/phone.png" alt="">@Model.contact.Phone</li>
+                                <li><img class="map" src="~/Public/images/icon/gmail.png" alt="">@Model.contact.Email</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- footer left -->
+                <!-- footer destination -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-footer">
+                        <div class="footer-title">
+                            <h3>Turlar</h3>
+                        </div>
+                        <ul class="footer-gallery">
+                            <li>
+                                <a href="~/Tours/Index">
+                                    <div class="image-overlay">
+                                        <img src="~/Public/images/destination/1.jpg" alt="">
+                                        <div class="overly-city">
+                                            <span>Austrila</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/Tours/Index">
+                                    <div class="image-overlay">
+                                        <img src="~/Public/images/destination/2.jpg" alt="">
+                                        <div class="overly-city">
+                                            <span>England</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/Tours/Index">
+                                    <div class="image-overlay">
+                                        <img src="~/Public/images/destination/3.jpg" alt="">
+                                        <div class="overly-city">
+                                            <span>France</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/Tours/Index">
+                                    <div class="image-overlay">
+                                        <img src="~/Public/images/destination/4.jpg" alt="">
+                                        <div class="overly-city">
+                                            <span>America</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>	<!-- footer destination -->
+                <!-- footer contact -->
+                <div class="col-md-4 col-sm-6 f-phone-responsive">
+                    <div class="single-footer">
+                        <div class="footer-title">
+                            <h3>Əlaqə</h3>
+                        </div>
+                        <div class="footer-contact-form">
+                            <form action="#">
+                                <ul class="footer-form-element">
+                                    <li>
+                                        <input type="text" name="email" id="email" placeholder="" value="Email Address" onblur="if(this.value==''){this.value='Email Address'}" onfocus="if(this.value=='Email Address'){this.value=''}">
+                                    </li>
+                                    <li>
+                                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                    </li>
+                                    <li>
+                                        <button>Göndər</button>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="footer-social-media">
+                            <div class="social-footer-title">
+                                <h3>Bizi izlə</h3>
+                            </div>
+                            <ul class="footer-social-link">
+                                <li class="facebook">
+                                    <a><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li class="twitter">
+                                    <a><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li class="linkedin">
+                                    <a><i class="fa fa-linkedin"></i></a>
+                                </li>
+                                <li class="gplus">
+                                    <a><i class="fa fa-google-plus"></i></a>
+                                </li>
+                                <li class="youtube">
+                                    <a><i class="fa fa-youtube-play"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>	<!-- footer contact -->
+            </div>
+
+            <div class="row">
+                <div class="footer-bottom">
+                    <div class="col-md-5">
+                        <div class="copyright">
+                            <p>Copyright &copy; 2018 Created By <a href="http://khaligheydarov.com"><span>Khalig</span></a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <ul class="payicon pull-right">
+                            <li>Qəbul edirik</li>
+                            <li><img src="~/Public/images/payicon01.png" alt=""></li>
+                            <li><img src="~/Public/images/payicon02.png" alt=""></li>
+                            <li><img src="~/Public/images/payicon03.png" alt=""></li>
+                            <li><img src="~/Public/images/payicon04.png" alt=""></li>
+                            <li><img src="~/Public/images/payicon05.png" alt=""></li>
+                            <li><img src="~/Public/images/payicon06.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> <!-- end footer -->
+
+
+
+    <div class="to-top pos-rtive">
+        <a><i class="fa fa-angle-up"></i></a>
+    </div><!-- Scroll to top-->
+    <!-- ============================
+            JavaScript Files
+    ============================= -->
+    <!-- jquery latest version -->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5c49b03051410568a108229b/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <script src="~/Public/js/vendor/jquery-3.2.0.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="~/Public/js/bootstrap.min.js"></script>
+    <!-- owl.carousel js -->
+    <script src="~/Public/js/owl.carousel.min.js"></script>
+    <!-- slick js -->
+    <script src="~/Public/js/slick.min.js"></script>
+    <!-- meanmenu js -->
+    <script src="~/Public/js/jquery.meanmenu.min.js"></script>
+    <!-- jquery-ui js -->
+    <script src="~/Public/js/jquery-ui.min.js"></script>
+    <!-- wow js -->
+    <script src="~/Public/js/wow.min.js"></script>
+    <!-- counter js -->
+    <script src="~/Public/js/jquery.counterup.min.js"></script>
+    <!-- Countdown js -->
+    <script src="~/Public/js/jquery.countdown.min.js"></script>
+    <!-- waypoints js -->
+    <script src="~/Public/js/jquery.waypoints.min.js"></script>
+    <!-- Isotope js -->
+    <script src="~/Public/js/isotope.pkgd.min.js"></script>
+    <!-- magnific js -->
+    <script src="~/Public/js/jquery.magnific-popup.min.js"></script>
+    <!-- Image loaded js -->
+    <script src="~/Public/js/imagesloaded.pkgd.min.js"></script>
+    <!-- chossen js -->
+    <script src="~/Public/js/chosen.jquery.min.js"></script>
+    <!-- Jquery plugin -->
+    <script src="~/Public/js/plugins.js"></script>
+    <!-- select2 js plugin -->
+    <script src="~/Public/js/select2.min.js"></script>
+    <script src="~/Public/js/colors.js"></script>
+    <!-- Jquery plugin -->
+    <script src="~/Public/js/jquery-customselect.js"></script>
+    <!-- google map api -->
+    <script src="~/Public/https://maps.googleapis.com/maps/api/js?key=AIzaSyCIW0B_E3g-Yg533xy3yF0WHThi-mFvSNQ"></script>
+    <!-- map js -->
+    <script src="~/Public/js/google-map.js"></script>
+    <!-- main js -->
+    <script src="~/Public/js/custom.js"></script>
+</body>
+
+<!-- Mirrored from getnajmul.com/theme/trabble/single-package.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Jan 2019 22:15:01 GMT -->
+</html>

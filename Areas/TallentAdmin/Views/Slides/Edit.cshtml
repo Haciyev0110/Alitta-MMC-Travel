@@ -1,0 +1,66 @@
+﻿@model AllittaMMC.Models.Slide
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Slides", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="sb2-2">
+            <div class="sb2-2-add-blog sb2-2-1">
+                <div class="box-inn-sp">
+                    <div class="inn-title">
+                        <h4>Yeni  Slider Yarat</h4>
+                    </div>
+                    <div class="bor">
+                        <form>
+                            <div class="row">
+
+                                <div class="input-field col s12">
+                                    <div class="file-field">
+                                        <div class="btn">
+                                            <span>File</span>
+                                            <input type="file" name="SlideImg">
+                                            <input type="hidden" name="fileadi" value="@Model.SlideImg" />
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text" placeholder="Upload Blog Banner" name="SlideImg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="textarea1" class="materialize-textarea" name="Text1">@Model.Text1</textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="textarea1" class="materialize-textarea" name="Text2">@Model.Text2</textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="textarea1" class="materialize-textarea" name="Text3">@Model.Text3</textarea>
+                                </div>
+                            </div> <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="textarea1" class="materialize-textarea" name="Text4">@Model.Text4</textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="submit" class="waves-effect waves-light btn-large" value="Submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

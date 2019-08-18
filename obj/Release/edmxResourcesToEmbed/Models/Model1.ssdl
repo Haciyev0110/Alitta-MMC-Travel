@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A4490D_khaligchModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AboutUS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Header" Type="nvarchar" MaxLength="50" />
+    <Property Name="TextH" Type="nvarchar(max)" />
+    <Property Name="TextP" Type="nvarchar(max)" />
+    <Property Name="Image" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Additional_Info">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Location" Type="nvarchar" MaxLength="20" />
+    <Property Name="Duration" Type="nvarchar" MaxLength="20" />
+    <Property Name="Min_Age" Type="int" />
+    <Property Name="Max_People" Type="int" />
+    <Property Name="Landing" Type="nvarchar" MaxLength="20" />
+    <Property Name="Check_In" Type="nvarchar" MaxLength="20" />
+    <Property Name="Check_Out" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Adminname" Type="nvarchar" MaxLength="150" />
+    <Property Name="Email" Type="nvarchar" MaxLength="250" />
+    <Property Name="AdminPassword" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Administrator">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Password" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="Office" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HomeSlide">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Hotels">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Hotel" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Isciler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Job" Type="nvarchar" MaxLength="50" />
+    <Property Name="Images" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="OurTeam">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="nvarchar(max)" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="100" />
+    <Property Name="Job" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="SocialID" Type="int" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Names" Type="nvarchar(max)" />
+    <Property Name="ServiceID" Type="int" />
+  </EntityType>
+  <EntityType Name="ServicesHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="nvarchar(max)" />
+    <Property Name="Header" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Slides">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text1" Type="nvarchar(max)" />
+    <Property Name="Text2" Type="nvarchar(max)" />
+    <Property Name="Text3" Type="nvarchar(max)" />
+    <Property Name="Text4" Type="nvarchar(max)" />
+    <Property Name="SlideImg" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Social">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Link1" Type="nvarchar(max)" />
+    <Property Name="Link2" Type="nvarchar(max)" />
+    <Property Name="Link3" Type="nvarchar(max)" />
+    <Property Name="Link4" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Tickets">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ticket" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TourPacket">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TourName" Type="nvarchar" MaxLength="50" />
+    <Property Name="TourDay" Type="nvarchar" MaxLength="50" />
+    <Property Name="HotelStar" Type="int" />
+    <Property Name="Price" Type="nvarchar" MaxLength="10" />
+    <Property Name="Image" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Additional_Info_ID" Type="int" />
+    <Property Name="Map_Tour" Type="nvarchar(max)" />
+    <Property Name="TourSortID" Type="int" />
+  </EntityType>
+  <EntityType Name="TourSort">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SortBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Transfer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Images" Type="nvarchar(max)" />
+    <Property Name="Car" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Travel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ticket" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK__OurTeam__SocialI__534D60F1">
+    <End Role="Social" Type="Self.Social" Multiplicity="0..1" />
+    <End Role="OurTeam" Type="Self.OurTeam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Social">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OurTeam">
+        <PropertyRef Name="SocialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Services__Servic__5441852A">
+    <End Role="ServicesHeader" Type="Self.ServicesHeader" Multiplicity="0..1" />
+    <End Role="Services" Type="Self.Services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServicesHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Services">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TourPacke__Addit__5535A963">
+    <End Role="Additional_Info" Type="Self.Additional_Info" Multiplicity="0..1" />
+    <End Role="TourPacket" Type="Self.TourPacket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Additional_Info">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TourPacket">
+        <PropertyRef Name="Additional_Info_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TourPacket_TourSort">
+    <End Role="TourSort" Type="Self.TourSort" Multiplicity="0..1" />
+    <End Role="TourPacket" Type="Self.TourPacket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TourSort">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TourPacket">
+        <PropertyRef Name="TourSortID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_A4490D_khaligchModelStoreContainer">
+    <EntitySet Name="AboutUS" EntityType="Self.AboutUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Additional_Info" EntityType="Self.Additional_Info" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Administrator" EntityType="Self.Administrator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HomeSlide" EntityType="Self.HomeSlide" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hotels" EntityType="Self.Hotels" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Isciler" EntityType="Self.Isciler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OurTeam" EntityType="Self.OurTeam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServicesHeader" EntityType="Self.ServicesHeader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Slides" EntityType="Self.Slides" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Social" EntityType="Self.Social" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tickets" EntityType="Self.Tickets" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TourPacket" EntityType="Self.TourPacket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TourSort" EntityType="Self.TourSort" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transfer" EntityType="Self.Transfer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Travel" EntityType="Self.Travel" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__OurTeam__SocialI__534D60F1" Association="Self.FK__OurTeam__SocialI__534D60F1">
+      <End Role="Social" EntitySet="Social" />
+      <End Role="OurTeam" EntitySet="OurTeam" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Services__Servic__5441852A" Association="Self.FK__Services__Servic__5441852A">
+      <End Role="ServicesHeader" EntitySet="ServicesHeader" />
+      <End Role="Services" EntitySet="Services" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TourPacke__Addit__5535A963" Association="Self.FK__TourPacke__Addit__5535A963">
+      <End Role="Additional_Info" EntitySet="Additional_Info" />
+      <End Role="TourPacket" EntitySet="TourPacket" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TourPacket_TourSort" Association="Self.FK_TourPacket_TourSort">
+      <End Role="TourSort" EntitySet="TourSort" />
+      <End Role="TourPacket" EntitySet="TourPacket" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

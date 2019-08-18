@@ -1,0 +1,39 @@
+﻿@model AllittaMMC.Models.Travel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Travels", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="sb2-2">
+            <div class="sb2-2-add-blog sb2-2-1">
+                <div class="box-inn-sp">
+                    <div class="inn-title" style="background-color:fuchsia;text-align:center">
+                        <h4 style="color:white;letter-spacing:3px;font-weight:500"> Travela Dəyişiklik Et</h4>
+                    </div>
+                    <div class="bor">
+                        <form>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="textarea1" class="materialize-textarea" name="Ticket">@Model.Ticket</textarea>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="submit" class="waves-effect waves-light btn-large" value="Submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

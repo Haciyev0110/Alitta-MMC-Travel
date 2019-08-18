@@ -1,0 +1,114 @@
+﻿@model AllittaMMC.Models.TourPacket
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="container-fluid sb2">
+    <div class="row">
+        <div class="sb2-2">
+            <div class="sb2-2-2">
+                <ul>
+                    <li>
+                        <a href="@Url.Action("Index","Dashboard")"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    </li>
+                    <li class="active-bre">
+                        <a href="@Url.Action("Index","TourPackets")">Geriyə Qayıd</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sb2-2-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box-inn-sp">
+                            <div class="inn-title">
+                                <h4>Tur Haqinda</h4>
+                            </div>
+                            <div class="tab-inn">
+                                <form>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="email" type="text" value="@Model.TourName" name="TourName" class="validate">
+                                            <label for="email">Başlıq</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="email" type="text" value="@Model.TourDay" name="TourDay" class="validate">
+                                            <label for="email">Başlıq</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="email" type="text" value="@Model.HotelStar" name="HotelStar" class="validate">
+                                            <label for="email">Başlıq</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="email" type="text" value="@Model.Price" name="Price" class="validate">
+                                            <label for="email">Başlıq</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="email" type="text" value="@Model.Map_Tour" name="Map_Tour" class="validate">
+                                            <label for="email">Başlıq</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="email" type="text" value="@Model.TourSort.SortBy" name="Map_Tour" class="validate">
+                                            <label for="email">Başlıq</label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="list-title" type="text" value="@Model.Additional_Info.Location" name="Location" class="validate">
+                                                <label for="list-title">Ölkə</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input id="list-title" type="text" value="@Model.Additional_Info.Duration" name="Duration" class="validate">
+                                                <label for="list-title">Müddət</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input id="list-title" type="number" min="0" max="100" value="@Model.Additional_Info.Min_Age" name="Min_Age" class="validate">
+                                                <label for="list-title">Minimum Yaş</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input id="list-title" type="number" min="0" value="@Model.Additional_Info.Max_People" name="Max_People" class="validate">
+                                                <label for="list-title">Maksimum İnsan</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input id="list-title" type="text" value="@Model.Additional_Info.Landing" name="Landing" class="validate">
+                                                <label for="list-title">Açılış</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input id="list-title" type="text" value="@Model.Additional_Info.Check_In" name="Check_In" class="validate">
+                                                <label for="list-title">Giriş Vaxtı</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input id="list-title" type="text" value="@Model.Additional_Info.Check_Out" name="Check_Out" class="validate">
+                                                <label for="list-title">Çıxış Vaxtı</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <textarea id="summernote"  class="materialize-textarea">@Model.Description</textarea>
+                                            <label for="textarea1">Məğzi:</label>
+                                        </div>
+                                        <div class="input-field col s4">
+
+                                            <label for="textarea1">Şəkil:</label>
+                                            <img src="~/Public/images/packages/@Model.Image" />
+                                        </div>
+                                    </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Script{
+    <script >
+
+        $(document).ready(function() {
+  $('#summernote').summernote();
+});
+    </script>
+    
+    }

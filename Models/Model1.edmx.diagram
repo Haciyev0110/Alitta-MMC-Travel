@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="12a7ffa84c804b168c53c3cbd4049727" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.AboutU" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.Additional_Info" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.Contact" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.HomeSlide" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.Hotel" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.OurTeam" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.Service" Width="1.5" PointX="5" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.ServicesHeader" Width="1.5" PointX="2.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.Slide" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.Social" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.Ticket" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.TourPacket" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.TourSort" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.Transfer" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.Travel" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="DB_A4490D_khaligchModel.FK__TourPacke__Addit__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4490D_khaligchModel.FK__OurTeam__SocialI__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4490D_khaligchModel.FK__Services__Servic__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4490D_khaligchModel.FK_TourPacket_TourSort" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.Admin" Width="1.5" PointX="9.75" PointY="10.75" />
+        <EntityTypeShape EntityType="DB_A4490D_khaligchModel.Administrator" Width="1.5" PointX="0.75" PointY="11.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,85 @@
+﻿@model IEnumerable<AllittaMMC.Models.OurTeam>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="sb2-2">
+    <div class="sb2-2-2">
+        <ul>
+            <li>
+                <a href="@Url.Action("Index","Home")"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            </li>
+            <li class="active-bre">
+                <a href="#"> Ui Form</a>
+            </li>
+        </ul>
+    </div>
+    <div class="sb2-2-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box-inn-sp">
+                    <div class="inn-title">
+                        <h4>Haqqımızda Duzeliş Et</h4>
+                        <p>Haqqımızda</p>
+                        <a class="dropdown-button drop-down-meta" href="#" data-activates="dr-users"><i class="material-icons">more_vert</i></a>
+                        <ul id="dr-users" class="dropdown-content">
+                            <li>
+                                <a href="@Url.Action("Create","OurTeams")">Add New</a>
+                            </li>
+                        </ul>
+
+                        <!-- Dropdown Structure -->
+
+                    </div>
+                    <div class="tab-inn">
+                        <div class="table-responsive table-desi">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Şəkil</th>
+                                        <th>Ad Soyad</th>
+                                        <th>Peşəsi</th>
+                                        <th>Email</th>
+
+                                        <th>View</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                    <tr>
+                                        <td>
+                                            <span class="list-img"><img style="width:100px;height:100px" src="~/Public2/images/team/@item.Image" alt=""></span>
+                                        </td>
+                                        <td>
+                                            <a href="#"><span class="list-enq-name">@item.Fullname</span></a>
+                                        </td>
+                                        <td>@item.Job</td>
+                                        <td>@item.Email</td>
+
+                                        <td>
+                                            <a href="@Url.Action("Details","OurTeams",new {id=item.Id })"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("Edit","OurTeams",new {id=item.Id })"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("Delete","OurTeams",new {id=item.Id })"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

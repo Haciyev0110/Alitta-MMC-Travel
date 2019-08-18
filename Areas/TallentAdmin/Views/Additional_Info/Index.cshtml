@@ -1,0 +1,93 @@
+﻿@model IEnumerable<AllittaMMC.Models.Additional_Info>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="container-fluid sb2">
+    <div class="row">
+        <div class="sb2-2">
+            <div class="sb2-2-2">
+                <ul>
+                    <li>
+                        <a href="@Url.Action("Index","Dashboard")"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    </li>
+                    <li class="active-bre">
+                        <a href="#"> Ui Form</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sb2-2-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box-inn-sp">
+                            <div class="inn-title">
+                                <h4>Tur Paketləri</h4>
+                                <p></p>
+                                <a class="dropdown-button drop-down-meta" href="#" data-activates="dr-users"><i class="material-icons">more_vert</i></a>
+                                <ul id="dr-users" class="dropdown-content">
+                                    <li>
+                                        <a href="@Url.Action("Create","Additional_Info")">Add New</a>
+                                    </li>
+                                 
+                                </ul>
+
+                                <!-- Dropdown Structure -->
+
+                            </div>
+                            <div class="tab-inn">
+                                <div class="table-responsive table-desi">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Ölkə</th>
+                                                <th>Müddəti</th>
+                                                <th>Minimum Yaş</th>
+                                                <th>Max İnsan</th>
+                                                <th>Açılış</th>
+                                                <th>Giriş Vaxtı</th>
+                                                <th>Çıxış Vaxtı</th>
+
+
+                                                <th>View</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                            <tr>
+                                                <td>@item.Location</td>
+                                                <td>@item.Duration</td>
+                                                <td>@item.Min_Age</td>
+                                                <td>@item.Max_People</td>
+                                                <td>@item.Landing</td>
+                                                <td>@item.Check_In</td>
+                                                <td>@item.Check_Out</td>
+                                                <td>
+                                                    <a href="@Url.Action("Details","Additional_Info",new {id=item.ID })"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a href="@Url.Action("Edit","Additional_Info",new {id=item.ID })"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a href="@Url.Action("Delete","Additional_Info",new {id=item.ID })"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                </td>
+                                            </tr>
+
+                                            }
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

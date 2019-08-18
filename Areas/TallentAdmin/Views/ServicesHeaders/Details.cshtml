@@ -1,0 +1,54 @@
+﻿@model AllittaMMC.Models.ServicesHeader
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="container-fluid sb2">
+    <div class="row">
+        <div class="sb2-2">
+            <div class="sb2-2-2">
+                <ul>
+                    <li>
+                        <a href="@Url.Action("Index","Dashboard")"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    </li>
+                    <li class="active-bre">
+                        <a href="@Url.Action("Index","ServicesHeaders")">Geriyə Qayıd</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sb2-2-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box-inn-sp">
+                            <div class="inn-title">
+                                <h4>Serviz Kateqoriyalari Gözdən Keçir</h4>
+                            </div>
+                            <div class="tab-inn">
+                                <form>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="email" type="text" value="@Model.Header" class="validate">
+                                            <label for="email">Kateqoriya Adi</label>
+                                        </div>
+                                       
+
+
+                                        <div class="input-field col s4">
+
+                                            <label for="textarea1">Şəkil:</label>
+                                            <img src="~/Public2/images/service/@Model.Image" />
+                                        </div>
+                                    </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

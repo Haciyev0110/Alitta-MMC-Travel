@@ -1,0 +1,64 @@
+﻿@model AllittaMMC.Models.Contact
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create","Contacts",FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid sb2">
+        <div class="row">
+            <div class="sb2-2">
+                <div class="sb2-2-2">
+                    <ul>
+                        <li>
+                            <a href="@Url.Action("Index","Additional_Info")"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="sb2-2-add-blog sb2-2-1">
+                    <h2>Yeni Unvan Yarad </h2>
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="list-title" type="text" value="" name="Location" class="validate">
+                                <label for="list-title">Ölkə və Şəhər</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="list-title" type="tel" value="" name="Phone" class="validate">
+                                <label for="list-title">Telefon</label>
+                            </div>
+                            
+                            <div class="input-field col s12">
+                                <input id="list-title" type="email" min="0" value="" name="Email" class="validate">
+                                <label for="list-title">Email</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="list-title" type="text" value="" name="Address" class="validate">
+                                <label for="list-title">Ünvan</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="list-title" type="text" value="" name="Office" class="validate">
+                                <label for="list-title">Offis</label>
+                            </div>
+                           
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="submit" class="waves-effect waves-light btn-large" value="Submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

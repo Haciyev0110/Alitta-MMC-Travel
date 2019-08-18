@@ -1,0 +1,51 @@
+﻿@model AllittaMMC.Models.Hotel
+
+@{
+                /**/
+
+                ViewBag.Title = "Edit";
+                Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Edit","Hotels",FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <<div class="container-fluid sb2">
+        <div class="row">
+            <div class="sb2-2">
+                <div class="sb2-2-2">
+                    <ul>
+                        <li>
+                            <a href="@Url.Action("Index","Hotels")"><i class="fa fa-home" aria-hidden="true"></i> Geriyə Qayıd</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="sb2-2-add-blog sb2-2-1">
+                    <h2>Otellərə Dəyişiklik Et </h2>
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="list-title" type="text" value="@Model.Hotel1" name="Hotel1" class="validate">
+                                <label for="list-title">Hotel</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="submit" class="waves-effect waves-light btn-large" value="Submit">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

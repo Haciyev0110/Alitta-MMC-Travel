@@ -1,0 +1,99 @@
+﻿@model AllittaMMC.Models.TourPacket
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="container-fluid sb2">
+    <div class="row">
+        <div class="sb2-2">
+            <div class="sb2-2-2">
+                <ul>
+                    <li>
+                        <a href="@Url.Action("Index", "Dashboard")"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    </li>
+                    <li class="active-bre">
+                        <a href="@Url.Action("Index", "TourPackets")">Geriyə Qayıd</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sb2-2-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box-inn-sp">
+                            <div class="inn-title">
+                                <h4>View Haqqımızda Details</h4>
+                            </div>
+                            <div class="tab-inn">
+                                <form>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="email" type="text" value="@Model.TourName" class="validate">
+                                            <label for="email">Başlıq</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="email" type="text" value="@Model.TourDay" class="validate">
+                                            <label for="email">Tur Müddəti</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="email" type="text" value="@Model.HotelStar" class="validate">
+                                            <label for="email">Hotel Səviyyəsi</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="email" type="text" value="@Model.Price" class="validate">
+                                            <label for="email">Qiyməti</label>
+                                        </div>
+                                       
+                                        <div class="input-field col s12">
+                                            <input id="email" type="text" value="@Model.TourSort.SortBy" class="validate">
+                                            <label for="email">Tur Növü</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="email" type="text" value="@Model.Map_Tour" class="validate">
+                                            <label for="email">Tura aid Ünvan</label>
+                                        </div>  
+                                        <div class="input-field col s12">
+
+                                            <label for="email">Tura aid Kompaniya Haqqında</label>
+
+                                            <input id="email" type="text" value="Ölkə: @Model.Additional_Info.Landing " class="validate">
+                                            <input id="email" type="text" value="Açılış: @Model.Additional_Info.Location" class="validate">
+                                            <input id="email" type="text" value="Müddəti: @Model.Additional_Info.Duration" class="validate">
+                                            <input id="email" type="text" value="Max İnsan: @Model.Additional_Info.Max_People" class="validate">
+                                            <input id="email" type="text" value="Minimum Yaş: @Model.Additional_Info.Min_Age" class="validate">
+                                            <input id="email" type="text" value="Giriş Vaxtı: @Model.Additional_Info.Check_In" class="validate">
+                                            <input id="email" type="text" value="Çıxış Vaxtı: @Model.Additional_Info.Check_Out" class="validate">
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <textarea id="summernote" name="editordata">@Model.Description</textarea>
+                                            <label for="summernote">Məzmunu:</label>
+                                        </div>
+
+                                        <div class="input-field col s4">
+
+                                            <label for="textarea1">Şəkil:</label>
+                                            <img src="~/Public/images/packages/@Model.Image" />
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Script{
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Hello stand alone ui',
+            tabsize: 2,
+            height: 300
+        });
+  </script>
+    
+    }

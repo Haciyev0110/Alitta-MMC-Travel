@@ -1,0 +1,526 @@
+﻿@using AllittaMMC.Models;
+
+@model IndexVM
+
+<!DOCTYPE html>
+<html class="no-js" lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="ALLITTA MMC, ALLITTA">
+    <meta name="keywords" content="ALLITTA MMC, ALLITTA">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL INTERNATIONAL TIME TO ACTION</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/Public/image1.png">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="~/Public/css/bootstrap.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="~/Public/css/animate.css">
+    <!-- Button Hover animate css -->
+    <link rel="stylesheet" href="~/Public/css/hover-min.css">
+    <!-- jquery-ui.min css -->
+    <link rel="stylesheet" href="~/Public/css/jquery-ui.min.css">
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="~/Public/css/meanmenu.min.css">
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="~/Public/css/owl.carousel.min.css">
+    <!-- slick css -->
+    <link rel="stylesheet" href="~/Public/css/slick.css">
+    <!-- chosen.min-->
+    <link rel="stylesheet" href="~/Public/css/chosen.min.css">
+    <!-- chosen.min-->
+    <link rel="stylesheet" href="~/Public/css/jquery-customselect.css">
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="~/Public/css/font-awesome.min.css">
+    <!-- magnific Css -->
+    <link rel="stylesheet" href="~/Public/css/magnific-popup.css">
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="~/Public/css/assets/revolution/layers.css">
+    <link rel="stylesheet" href="~/Public/css/assets/revolution/navigation.css">
+    <link rel="stylesheet" href="~/Public/css/assets/revolution/settings.css">
+    <!-- custome css -->
+    <link rel="stylesheet" href="~/Public/css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="~/Public/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="~/Public/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+
+<body>
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <header>
+        <div class="header-top-area">
+            <div class="container">
+                <div class="row">
+                    <div class="header-top-left">
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <ul class="header-top-contact">
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i>@Model.contact.Location</li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>@Model.contact.Phone</li>
+                                <li><i class="fa fa-envelope-o" aria-hidden="true"></i>@Model.contact.Email</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-top-right text-right">
+                        <div class="col-md-3 col-xs-12 book-tab">
+                            <div class="book-btn">
+                                <a href="http://avia.allittammc.com">Bilet Al</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- header top end -->
+
+        <div class="header-bottom-area" id="stick-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-2 col-xs-12 tap-v-responsive">
+                        <div class="logo-area">
+                            <a href="~/Home/Index">
+                                <img src="~/Public/image1.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <nav>
+                            <ul class="main-menu text-right">
+                                <li>
+                                    <a href="~/Home/Index">Ana Səhifə</a>
+                                </li>
+                                <li>
+                                    <a href="~/About/Index">Haqqımızda</a>
+                                </li>
+                                <li>
+                                    <a href="~/Tours/Index">Turlar</a>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="~/Tours/Xarici">Xarici Turlar</a>
+                                        </li>
+                                        <li>
+                                            <a href="~/Tours/Daxili">Daxili Turlar</a>
+                                        </li>
+                                        <li>
+                                            <a href="~/Tours/Mualicevi">Müalicəvi</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="~/Hotels/Index">Hotellər</a>
+                                </li>
+                                <li>
+                                    <a href="~/Xidmet/Transfer">Transfer</a>
+                                </li>
+                                <li>
+                                    <a href="~/Xidmet/Index">Xidmətlər</a>
+                                </li>
+                                <li>
+                                    <a href="~/Contact/Index/">Əlaqə</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div> <!-- main menu end here -->
+                </div>
+            </div>
+        </div> <!-- header-bottom area end here -->
+    </header> <!-- header area end here -->
+    <!-- slider area start here -->
+    <section class="slider-area">
+        <div class="rev_slider_wrapper">
+            <div id="rev_slider_1" class="rev_slider" style="display:none">
+                <ul>
+                    @foreach (var item in Model.slides)
+                    {
+                        <li data-index="rs-3010" data-transition="fade" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="1000" data-thumb="images/slider/slider-back-01.jpg" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1000" data-fsslotamount="7" data-saveperformance="off" data-title="Intro" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                            <div class="slider-overlay"></div>
+                            <!-- MAIN IMAGE -->
+                            <img src="~/Public/images/slider/@item.SlideImg" alt="Sky" class="rev-slidebg">
+                            <!-- BEGIN BASIC TEXT LAYER -->
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption sfr font-extra-bold tp-resizeme letter-space-4 title-line-1" data-x="['center', 'center', 'center', 'center']" data-hoffset="0" data-y="center" data-voffset="-150" data-frames='[{"delay":0,"speed":3000,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 6; font-size:40px; color:#fff; text-transform:capitalize; font-family:'Poppins', sans-serif; white-space: nowrap; font-weight:400;">
+                                @item.Text1
+                            </div>
+
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption sfr font-extra-bold tp-resizeme letter-space-4 title-line-2" data-x="center" data-hoffset="0" data-y="center" data-voffset="-80" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":750,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]' style="z-index: 6; color:#fff; text-transform:capitalize; font-family:'Poppins', sans-serif; white-space: nowrap;">
+                                <h1 style="font-weight:00; font-size:60px;"> @item.Text2</h1>
+                            </div>
+
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption font-lora sfb tp-resizeme letter-space-5  header-p1" data-x="center" data-hoffset="0" data-y="center" data-voffset="-5" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":750,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]' style="z-index: 7; font-size:16px; color:#fff; font-family:'Poppins', sans-serif; white-space: nowrap; font-weight:400;">
+                                @item.Text3
+                            </div>
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption font-lora sfb tp-resizeme letter-space-5 header-p2" data-x="center" data-hoffset="0" data-y="center" data-voffset="20" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":750,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]' style="z-index: 7; font-size:16px; color:#fff; font-family:'Poppins', sans-serif; white-space: nowrap; font-weight:400;">
+                                @item.Text4
+                            </div>
+
+                            <!-- LAYER NR. 5 -->
+                            <div class="tp-caption lfb tp-resizeme  header-btn" data-x="center" data-hoffset="0" data-y="center" data-voffset="120" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":750,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]' style="z-index: 8;">
+                                <a href="~/Tours/Index" class="travel-primary-btn hvr-fade">Turlara Bax</a>
+                            </div>
+                        </li>
+
+                    }
+
+                    <!-- first slider end -->
+                </ul>
+            </div> <!-- end slider container -->
+        </div> <!-- END end slider container wrapper -->
+    </section> <!-- slider area end here -->
+
+    <section class="tabbased-search-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <script charset="utf-8" src="//www.travelpayouts.com/widgets/85d36a19fd7b66f3d294205a1ffdcd30.js?v=1627" async></script>
+                </div>
+            </div>
+        </div>
+    </section> <!-- header tab based search area end-->
+
+    <section class="popular-packages pb-70 pt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="section-title text-center">
+                        <h2>Ən Populyar Paketlərimiz</h2>
+                        <p>Daha çox xüsusi təkliflərlə tanış olmaq üçün bizimlə əlaqə saxlayın</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @foreach (var item in Model.tourPackets.OrderBy(a => Guid.NewGuid()).Take(3))
+                {
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-package">
+                            <div class="package-image">
+                                <a href="~/Tours/Single/@item.ID">
+                                    <img src="~/Public/images/packages/@item.Image" alt="">
+                                </a>
+                            </div>
+                            <div class="package-content">
+                                <h3>@item.TourName</h3>
+                                <p>
+                                    @item.TourDay Start From <span>@item.Price</span>
+                                </p>
+                            </div>
+                            <div class="package-calto-action">
+                                <ul class="ct-action">
+                                    <li>
+                                        <a href="~/Tours/Single/@item.ID" class="travel-booking-btn hvr-shutter-out-horizontal">Book Now</a>
+                                    </li>
+                                    <li>
+                                        @for (int i = 0; i < item.HotelStar; i++)
+                                        {
+                                            <i class="fa fa-star"></i>
+                                        }
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="row">
+                @foreach (var item in Model.tourPackets.OrderBy(a => Guid.NewGuid()).Take(3))
+                {
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-package">
+                            <div class="package-image">
+                                <a href="~/Public/#">
+                                    <img src="~/Public/images/packages/@item.Image" alt="">
+                                </a>
+                            </div>
+                            <div class="package-content">
+                                <h3>@item.TourName</h3>
+                                <p>
+                                    @item.TourDay Start From <span>@item.Price</span>
+                                </p>
+                            </div>
+                            <div class="package-calto-action">
+                                <ul class="ct-action">
+                                    <li>
+                                        <a href="~/Tours/Single/@item.ID" class="travel-booking-btn hvr-shutter-out-horizontal">Book Now</a>
+                                    </li>
+                                    <li>
+                                        @for (int i = 0; i < item.HotelStar; i++)
+                                        {
+                                            <i class="fa fa-star"></i>
+                                        }
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section> <!--end  popular packajge -->
+
+    <section class="countdown count-down-bg image-bg-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12-col-xs-12">
+                    <div class="count-down-titile">
+                        <h3>Xüsusi Tur Bu ayda, <span class="color-one">Taylandı</span> gəzmək üçün <br> 30%-a qədər <span class="color-two">Endirim</span> </h3>
+                    </div>
+                    <div class="count-timer text-center">
+                        <div class="time-wrapper">
+                            <p>Tələsin, Yerlər Məhduddur!</p>
+                            <div class="timer">
+                                <div data-countdown="2019/2/15"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buy-now text-center">
+                        <a href="~/Tours/Single/2" class="travel-primary-btn hvr-fade">Indi Al</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  <!--end  countdown -->
+
+    <section class="pb-70 pt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="section-title text-center">
+                        <h2>Online Bilet Al</h2>
+                        <p>Tam Təhlükəsiz Yolla Ucuz Və Sərfəli Bilet Əldə Etmə İmkani</p>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-slider-active owl-carousel">
+                @foreach (var item in Model.tickets.OrderBy(a => Guid.NewGuid()).Take(5))
+                {
+                    <div class="single-destination">
+                        <script async src="@item.Ticket1" charset="UTF-8"></script>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- testimonial area start here -->
+
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <!-- footer left -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-footer">
+                        <div class="footer-title">
+                            <a href="~/Home/Index">
+                                <img src="~/Public/image1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer-left">
+                            <div class="footer-logo">
+                                <p>Lorem ipsum dolor sit amet conset ctetur adipiscin elit Etiam at ipsum at ligula vestibulum sodales.</p>
+                            </div>
+                            <ul class="footer-contact">
+                                <li><img class="map" src="~/Public/images/icon/map.png" alt="">@Model.contact.Location</li>
+                                <li><img class="map" src="~/Public/images/icon/phone.png" alt="">@Model.contact.Phone</li>
+                                <li><img class="map" src="~/Public/images/icon/gmail.png" alt="">@Model.contact.Email</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- footer left -->
+                <!-- footer destination -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-footer">
+                        <div class="footer-title">
+                            <h3>Turlar</h3>
+                        </div>
+                        <ul class="footer-gallery">
+                            <li>
+                                <a href="~/Tours/Index">
+                                    <div class="image-overlay">
+                                        <img src="~/Public/images/destination/1.jpg" alt="">
+                                        <div class="overly-city">
+                                            <span>Austrila</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/Tours/Index">
+                                    <div class="image-overlay">
+                                        <img src="~/Public/images/destination/2.jpg" alt="">
+                                        <div class="overly-city">
+                                            <span>England</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/Tours/Index">
+                                    <div class="image-overlay">
+                                        <img src="~/Public/images/destination/3.jpg" alt="">
+                                        <div class="overly-city">
+                                            <span>France</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/Tours/Index">
+                                    <div class="image-overlay">
+                                        <img src="~/Public/images/destination/4.jpg" alt="">
+                                        <div class="overly-city">
+                                            <span>America</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>	<!-- footer destination -->
+                <!-- footer contact -->
+                <div class="col-md-4 col-sm-6 f-phone-responsive">
+                    <div class="single-footer">
+                        <div class="footer-title">
+                            <h3>Əlaqə</h3>
+                        </div>
+                        <div class="footer-contact-form">
+                            <form action="#">
+                                <ul class="footer-form-element">
+                                    <li>
+                                        <input type="text" name="email" id="email" placeholder="" value="Email Address" onblur="if(this.value==''){this.value='Email Address'}" onfocus="if(this.value=='Email Address'){this.value=''}">
+                                    </li>
+                                    <li>
+                                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                    </li>
+                                    <li>
+                                        <button>Göndər</button>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="footer-social-media">
+                            <div class="social-footer-title">
+                                <h3>Bizi izlə</h3>
+                            </div>
+                            <ul class="footer-social-link">
+                                <li class="facebook">
+                                    <a><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li class="twitter">
+                                    <a><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li class="linkedin">
+                                    <a><i class="fa fa-linkedin"></i></a>
+                                </li>
+                                <li class="gplus">
+                                    <a><i class="fa fa-google-plus"></i></a>
+                                </li>
+                                <li class="youtube">
+                                    <a><i class="fa fa-youtube-play"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>	<!-- footer contact -->
+            </div>
+
+            <div class="row">
+                <div class="footer-bottom">
+                    <div class="col-md-5">
+                        <div class="copyright">
+                            <p>Copyright &copy; 2018 Created By <a href="http://khaligheydarov.com"><span>Khalig</span></a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <ul class="payicon pull-right">
+                            <li>Qəbul edirik</li>
+                            <li><img src="~/Public/images/payicon01.png" alt=""></li>
+                            <li><img src="~/Public/images/payicon02.png" alt=""></li>
+                            <li><img src="~/Public/images/payicon03.png" alt=""></li>
+                            <li><img src="~/Public/images/payicon04.png" alt=""></li>
+                            <li><img src="~/Public/images/payicon05.png" alt=""></li>
+                            <li><img src="~/Public/images/payicon06.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> <!-- end footer -->
+
+    <div class="to-top pos-rtive">
+        <a><i class="fa fa-angle-up"></i></a>
+    </div><!-- Scroll to top-->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5c49b03051410568a108229b/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <!-- jquery -->
+    <script src="~/Public/js/vendor/jquery-3.2.0.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="~/Public/js/bootstrap.min.js"></script>
+    <!-- owl.carousel js -->
+    <script src="~/Public/js/owl.carousel.min.js"></script>
+    <!-- slick js -->
+    <script src="~/Public/js/slick.min.js"></script>
+    <!-- meanmenu js -->
+    <script src="~/Public/js/jquery.meanmenu.min.js"></script>
+    <!-- jquery-ui js -->
+    <script src="~/Public/js/jquery-ui.min.js"></script>
+    <!-- wow js -->
+    <script src="~/Public/js/wow.min.js"></script>
+    <!-- counter js -->
+    <script src="~/Public/js/jquery.counterup.min.js"></script>
+    <!-- Countdown js -->
+    <script src="~/Public/js/jquery.countdown.min.js"></script>
+    <!-- waypoints js -->
+    <script src="~/Public/js/jquery.waypoints.min.js"></script>
+    <!-- Isotope js -->
+    <script src="~/Public/js/isotope.pkgd.min.js"></script>
+    <!-- magnific js -->
+    <script src="~/Public/js/jquery.magnific-popup.min.js"></script>
+    <!-- Image loaded js -->
+    <script src="~/Public/js/imagesloaded.pkgd.min.js"></script>
+    <!-- chossen js -->
+    <script src="~/Public/js/chosen.jquery.min.js"></script>
+    <!-- Revolution JS -->
+    <script src="~/Public/js/assets/revolution/jquery.themepunch.revolution.min.js"></script>
+    <script src="~/Public/js/assets/revolution/jquery.themepunch.tools.min.js"></script>
+    <script src="~/Public/js/assets/revolution/extensions/revolution.extension.actions.min.js"></script>
+    <script src="~/Public/js/assets/revolution/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="~/Public/js/assets/revolution/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="~/Public/js/assets/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="~/Public/js/assets/revolution/extensions/revolution.extension.migration.min.js"></script>
+    <script src="~/Public/js/assets/revolution/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="~/Public/js/assets/revolution/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="~/Public/js/assets/revolution/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="~/Public/js/assets/revolution/extensions/revolution.extension.video.min.js"></script>
+    <script src="~/Public/js/assets/revolution/revolution.js"></script>
+    <!-- plugin js -->
+    <script src="~/Public/js/plugins.js"></script>
+    <!-- select2 js -->
+    <script src="~/Public/js/select2.min.js"></script>
+    <script src="~/Public/js/colors.js"></script>
+    <!-- customSelect Js -->
+    <script src="~/Public/js/jquery-customselect.js"></script>
+    <!-- custom js -->
+    <script src="~/Public/js/custom.js"></script>
+</body>
+
+<!-- Mirrored from getnajmul.com/theme/trabble/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Jan 2019 22:10:18 GMT -->
+</html>

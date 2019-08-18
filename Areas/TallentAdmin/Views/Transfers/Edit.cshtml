@@ -1,0 +1,60 @@
+﻿@model AllittaMMC.Models.Transfer
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Edit", "Transfers", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+<div class="row">
+    <div class="sb2-2">
+        <div class="sb2-2-add-blog sb2-2-1">
+            <div class="box-inn-sp">
+                <div class="inn-title" style="background-color:fuchsia;text-align:center">
+                    <h4 style="color:white;letter-spacing:3px;font-weight:500">Nəqliyyata Dəyişiklik Et</h4>
+                </div>
+                <div class="bor">
+                    <form>
+                        <div class="row">
+
+                            <div class="input-field col s12">
+                                <div class="file-field">
+                                    <div class="btn">
+                                        <span>File</span>
+                                        <input type="file" name="Images">
+                                        <input type="hidden" name="fileadi" value="@Model.Images" />
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text" placeholder="Upload Blog Banner" name="Images">
+                                    </div>
+                                </div>
+                                <div class="phot">
+                                    <img style="width:200px;height:200px" src="~/Public2/images/service/@Model.Images" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="textarea1" class="materialize-textarea" name="Car">@Model.Car</textarea>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="submit" class="waves-effect waves-light btn-large" value="Submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+
+

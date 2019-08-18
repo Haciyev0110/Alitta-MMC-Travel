@@ -1,0 +1,142 @@
+﻿@model AllittaMMC.Models.TourPacket
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/TallentAdmin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Create", "TourPackets", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid sb2">
+        <div class="row">
+            <div class="sb2-2">
+                <div class="sb2-2-2">
+                    <ul>
+                        <li>
+                            <a href="@Url.Action("Index", "Dashboard")"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        </li>
+                        <li class="active-bre">
+                            <a href="@Url.Action("Index", "TourPackets")">Geriyə Qayıd</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sb2-2-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4>Tur Haqinda</h4>
+                                </div>
+                                <div class="tab-inn">
+                                    <form>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <div class="file-field">
+                                                    <div class="btn">
+                                                        <span>File</span>
+                                                        <input type="file" name="Image">
+                                                    </div>
+                                                    <div class="file-path-wrapper">
+                                                        <input class="file-path validate" type="text" placeholder="Upload Blog Banner" name="Image">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input id="email" type="text" name="TourName" class="validate">
+                                                <label for="email">Başlıq</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input id="email" type="text" name="TourDay" class="validate">
+                                                <label for="email">Başlıq</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input id="email" type="text" name="HotelStar" class="validate">
+                                                <label for="email">Başlıq</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input id="email" type="text" name="Price" class="validate">
+                                                <label for="email">Başlıq</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input id="email" type="text" name="Map_Tour" class="validate">
+                                                <label for="email">Başlıq</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <select>
+                                                    @foreach (var item in ViewBag.TourSort)
+                                                    {
+                                                        <option value="@item.ID">@item.SortBy</option>
+
+                                                    }
+
+                                                </select>
+                                                <select id="addinfo">
+                                                    @foreach (var item in ViewBag.Adinfo)
+                                                    {
+                                                        <option value="@item.ID">@item.ID</option>
+
+                                                    }
+                                                </select>
+
+
+                                                <label for="email">Başlıq</label>
+                                            </div>
+
+                                            <div id="prc">
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <textarea id="summernote" name="Description" class="materialize-textarea"></textarea>
+                                            </div>
+
+                                        </div>
+
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+
+
+@section Script{
+    <script>
+
+        $('#summernote').summernote({
+            placeholder: 'Mətni',
+            tabsize: 2,
+            height: 300
+        });
+    </script>
+    <script>
+        $(document).on("change", "#addinfo", function () {
+            var adinfos = $(this).val();
+            debugger
+            $.ajax({
+                type: "Get",
+                url: "/TallentAdmin/Ajax/Adinforesult",
+                dataType: "html",
+                data: { id: adinfos },
+                success: function (res) {
+                    $("#prc").html(res);
+
+                }
+
+
+
+            })
+
+        });
+    </script>
+}
+
+

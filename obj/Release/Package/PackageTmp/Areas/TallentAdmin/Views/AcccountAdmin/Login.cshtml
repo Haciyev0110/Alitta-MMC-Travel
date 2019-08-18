@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="~/Areas/TallentAdmin/Public/css/Admincss.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-4">
+                <div class="login-box col-md-12">
+                    <h1>Admin Panel</h1>
+                    <div class="text-danger" asp-validation-summary="All"></div>
+                    <form action="@Url.Action("Login","AccountAdmin")" method="post">
+                        <div class="form-group">
+                            <label name="Email"></label>
+                            <input asp-for="Email" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Password"></label>
+                            <input asp-for="Password" class="form-control" />
+                        </div>
+                        <div class="forgot">
+                            <a href="reset.html">Forgot password?</a>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
